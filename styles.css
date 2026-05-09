@@ -6,15 +6,38 @@
 
 body {
     font-family: 'Segoe UI', 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
-    background-color: #fef9f5;
-    color: #2d2a2a;
+    background-color: #e0a9db;
+    color: #dbafe4;
     line-height: 1.5;
 }
-
+.margen{
+    text-align: right;
+    height: 60px; /* Ajusta el grosor */
+    background-color: #00aced; /* Azul claro */
+    width: 100%;
+}
+i{
+    
+    font-size: 50px;    /* o el tamaño que quieras */
+    color: #25D366;     /* verde WhatsApp */
+}
+.logo{
+    height: 80px;
+    background-color: #b9d8e3; /* Azul claro */
+    width: 100%;
+}
 .container {
     max-width: 1200px;
+    background-color: #b9d8e3;
     margin: 0 auto;
     padding: 2rem 1.5rem;
+}
+.container h1{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #131415;
+    letter-spacing: -0.5px;
+    margin-bottom: 1rem;
 }
 
 .hero {
@@ -25,7 +48,7 @@ body {
 .hero h1 {
     font-size: 2.5rem;
     font-weight: 600;
-    color: #e67e5c;
+    color: #11a2e0;
     letter-spacing: -0.5px;
     margin-bottom: 1rem;
 }
