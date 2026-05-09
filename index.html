@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>MECEL S.A.</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="hero">
+        <h1>✨ Nuestros servicios de cuidado infantil ✨</h1>
+        <p>Soluciones flexibles y confiables para que tu familia tenga la tranquilidad que merece. Conócenos y elige la opción que mejor se adapte a ti.</p>
+    </div>
+
+    <div class="servicios-grid">
+        <!-- SERVICIO 1 - PERMANENTE -->
+        <div class="servicio-card">
+            <div class="card-img img-permanente"></div>
+            <div class="card-content">
+                <h3>Permanente</h3>
+                <div class="descripcion">
+                    Cuidado fijo de lunes a viernes, en horarios de 6 a 11 horas diarias. Plan de trabajo personalizado y reemplazo garantizado en caso de ausencia de la niñera titular.
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="#contacto" class="btn-contacto">Solicitar información</a>
+            </div>
+        </div>
+
+        <!-- SERVICIO 2 - OCASIONAL -->
+        <div class="servicio-card">
+            <div class="card-img img-ocasional"></div>
+            <div class="card-content">
+                <h3>Ocasional / Por horas</h3>
+                <div class="descripcion">
+                    Para salidas, eventos o emergencias. Mínimo 6 horas, disponible diurno o nocturno. Ideal para vacaciones o fines de semana.
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="#contacto" class="btn-contacto">Reservar hora</a>
+            </div>
+        </div>
+
+        <!-- SERVICIO 3 - POSTPARTO -->
+        <div class="servicio-card">
+            <div class="card-img img-postparto"></div>
+            <div class="card-content">
+                <h3>Niñeras Postparto</h3>
+                <div class="descripcion">
+                    Auxiliares de enfermería especializadas en recién nacidos. Apoyo en lactancia, cuidados del bebé y bienestar de la madre durante el postparto.
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="#contacto" class="btn-contacto">Contáctanos</a>
+            </div>
+        </div>
+
+        <!-- SERVICIO 4 - EVENTOS Y HOTELES -->
+        <div class="servicio-card">
+            <div class="card-img img-eventos"></div>
+            <div class="card-content">
+                <h3>Eventos & Hoteles</h3>
+                <div class="descripcion">
+                    Cuidado infantil para bodas, congresos o huéspedes de hoteles en Bogotá. Personal capacitado para que los pequeños estén seguros y entretenidos.
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="#contacto" class="btn-contacto">Cotizar evento</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN DE CONTACTO -->
+    <div id="contacto" class="contacto-banner">
+        <h2>📞 ¿Necesitas una niñera hoy?</h2>
+        <p>Escríbenos o llámanos, estaremos encantados de resolver tus dudas.</p>
+        <div class="telefono">📱 +57 312 345 6789</div>
+        <p>✉️ <a href="mailto:info@tuservicio.com">info@tuservicio.com</a></p>
+        <p style="margin-top: 1rem;">📍 Bogotá - Servicio en toda la ciudad</p>
+    </div>
+
+    <hr />
+
+    <footer>
+        <p>© 2026 Tu Marca de Cuidado Infantil – Confianza y profesionalismo para tu familia.</p>
+        <p style="margin-top: 0.4rem;">✨ Modifica este texto y los datos con tu propia información ✨</p>
+    </footer>
+</div>
+
+<script>
+    document.querySelectorAll('.btn-contacto').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const contacto = document.getElementById('contacto');
+            if(contacto) {
+                contacto.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
+    });
+</script>
+</body>
+</html>

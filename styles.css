@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    background-color: #fef9f5;
+    color: #2d2a2a;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #e67e5c;
+    letter-spacing: -0.5px;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #5a4a42;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.servicio-card {
+    background: white;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #ffede3;
+}
+
+.servicio-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 32px rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    background-color: #fadcd0;
+}
+
+.card-content {
+    padding: 1.5rem;
+    flex: 1;
+}
+
+.card-content h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #3b2c26;
+}
+
+.card-content .descripcion {
+    color: #5e4b41;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
+
+.card-footer {
+    margin-top: auto;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.btn-contacto {
+    display: inline-block;
+    background-color: #e67e5c;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.7rem 1.4rem;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    font-family: inherit;
+}
+
+.btn-contacto:hover {
+    background-color: #cf6847;
+}
+
+.contacto-banner {
+    background: #fff4ef;
+    border-radius: 32px;
+    padding: 2rem 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    border: 1px solid #ffe3d6;
+}
+
+.contacto-banner h2 {
+    font-size: 1.8rem;
+    color: #e67e5c;
+    margin-bottom: 0.5rem;
+}
+
+.contacto-banner p {
+    margin-bottom: 1.2rem;
+    color: #4f3e36;
+}
+
+.contacto-banner a {
+    color: #e67e5c;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px dotted #e67e5c;
+}
+
+.telefono {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d2a2a;
+    margin-top: 0.5rem;
+}
+
+hr {
+    margin: 2rem 0;
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #ffcdb5, transparent);
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #a18272;
+    margin-top: 2rem;
+}
+
+@media (max-width: 640px) {
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+    .container {
+        padding: 1.5rem;
+    }
+    .telefono {
+        font-size: 1.2rem;
+    }
+}
+
+.img-permanente {
+    background-image: url('https://placehold.co/600x400/fcedf0/e67e5c?text=Niñera+Permanente');
+}
+.img-ocasional {
+    background-image: url('https://placehold.co/600x400/fcedf0/e67e5c?text=Cuidado+Ocasional');
+}
+.img-postparto {
+    background-image: url('https://placehold.co/600x400/fcedf0/e67e5c?text=Apoyo+Postparto');
+}
+.img-eventos {
+    background-image: url('https://placehold.co/600x400/fcedf0/e67e5c?text=Eventos+%26+Hotel');
+}
