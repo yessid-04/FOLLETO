@@ -18,27 +18,44 @@ body {
 }
 i{
     
-    font-size: 50px;    /* o el tamaño que quieras */
+    font-size: 50px;    /**/
     color: #25D366;     /* verde WhatsApp */
 }
-.logo{
-    height: 80px;
-    background-color: #b9d8e3; /* Azul claro */
-    width: 100%;
+
+
+
+/* Menú que ocupa el 100% del ancho disponible */
+.menu-fullwidth {
+  display: flex;                /* Activa flexbox */
+  justify-content: space-evenly; /* Distribuye espacio equitativamente */
+  background-color: #2c3e50;   /* Mismo fondo para todo */
+  padding: 0;
+  margin: 0;
+  width: 100%;                 /* Ocupa todo el ancho de su contenedor */
+  box-sizing: border-box;      /* Evita desbordes */
 }
-.container {
-    max-width: 1200px;
-    background-color: #b9d8e3;
-    margin: 0 auto;
-    padding: 2rem 1.5rem;
+
+/* Estilo de cada enlace */
+.menu-fullwidth a {
+  display: inline-block;
+  padding: 15px 0;             /* Solo padding vertical, el horizontal lo da flex */
+  text-align: center;
+  color: white;                /* Color de letra uniforme */
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-weight: 500;
+  flex: 1;                     /* Cada enlace ocupa el mismo ancho */
+  transition: all 0.2s ease;
 }
-.container h1{
-    font-size: 2rem;
-    font-weight: 600;
-    color: #131415;
-    letter-spacing: -0.5px;
-    margin-bottom: 1rem;
+
+/* Hover: cambia solo color de letra (opcional también fondo) */
+.menu-fullwidth a:hover {
+  color: #f1c40f;              /* Cambia a amarillo */
+  background-color: #34495e;   /* Si quieres que el fondo también cambie */
 }
+
+
+
 
 .hero {
     text-align: center;
