@@ -24,16 +24,18 @@ i{
 
 
 
-/* Menú que ocupa el 100% del ancho disponible */
-.menu-fullwidth {
-  display: flex;                /* Activa flexbox */
-  justify-content: space-evenly; /* Distribuye espacio equitativamente */
-  background-color: #2c3e50;   /* Mismo fondo para todo */
-  padding: 0;
-  margin: 0;
-  width: 100%;                 /* Ocupa todo el ancho de su contenedor */
-  box-sizing: border-box;      /* Evita desbordes */
-}
+    /* Menú que ocupa el 100% del ancho disponible */
+    .menu-fullwidth {
+    display: flex;                /* Activa flexbox */
+    justify-content: space-between; /* Distribuye espacio equitativamente */
+    align-items: center;
+    gap : 20px;
+    background-color: #2c3e50;   /* Mismo fondo para todo */
+    padding: 0 16px;
+    margin: 0;
+    width: 100%;                 /* Ocupa todo el ancho de su contenedor */
+    box-sizing: border-box;      /* Evita desbordes */
+    }
 
 /* Estilo de cada enlace */
 .menu-fullwidth a {
