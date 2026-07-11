@@ -72,6 +72,6 @@ jobForm.addEventListener('submit', (e) => {
     `Correo: ${correo}%0A` +
     `Experiencia: ${experiencia}`;
 
-  window.open(`https://wa.me/573123456789?text=${mensaje}`, '_blank');
+  window.open(`https://wa.me/573154325891?text=${mensaje}`, '_blank');
   jobForm.reset();
 });
