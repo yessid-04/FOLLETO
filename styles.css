@@ -75,6 +75,7 @@ p { color: var(--ink-soft); }
 
 .nav-tabs {
   display: flex;
+  width: 100%;
   gap: .35rem;
   overflow-x: auto;
   scrollbar-width: none;
@@ -82,7 +83,7 @@ p { color: var(--ink-soft); }
 .nav-tabs::-webkit-scrollbar { display: none; }
 
 .tab {
-  flex: none;
+  flex: 1;
   font-family: var(--font-body);
   font-weight: 600;
   font-size: .92rem;
@@ -97,6 +98,7 @@ p { color: var(--ink-soft); }
   top: 1px;
   transition: background .18s ease, color .18s ease;
   white-space: nowrap;
+  text-align: center;
 }
 
 .tab:hover { background: rgba(255,255,255,.14); color: #fff; }
