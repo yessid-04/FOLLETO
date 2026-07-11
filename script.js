@@ -1,0 +1,77 @@
+// ===================== NAVEGACIÓN POR PESTAÑAS (sin recargar la página) =====================
+const tabs = document.querySelectorAll('.tab');
+const panels = document.querySelectorAll('.panel');
+const navTabs = document.getElementById('navTabs');
+const menuToggle = document.getElementById('menuToggle');
+
+const VALID_TARGETS = Array.from(panels).map(p => p.id);
+
+function showPanel(id, { updateHash = true, closeMobileMenu = true } = {}) {
+  if (!VALID_TARGETS.includes(id)) id = VALID_TARGETS[0];
+
+  panels.forEach(panel => panel.classList.toggle('active', panel.id === id));
+  tabs.forEach(tab => tab.classList.toggle('active', tab.dataset.target === id));
+
+  if (updateHash) {
+    history.pushState(null, '', `#${id}`);
+  }
+
+  // Llevar el foco al inicio del panel para accesibilidad
+  const activePanel = document.getElementById(id);
+  if (activePanel) activePanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  if (closeMobileMenu) {
+    navTabs.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+  }
+}
+
+// Clic en cualquier pestaña del menú
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => showPanel(tab.dataset.target));
+});
+
+// Botones internos que también cambian de pestaña (ej. "Ver servicios")
+document.querySelectorAll('[data-goto]').forEach(btn => {
+  btn.addEventListener('click', () => showPanel(btn.dataset.goto));
+});
+
+// Botón hamburguesa (móvil)
+menuToggle.addEventListener('click', () => {
+  const isOpen = navTabs.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', isOpen);
+});
+
+// Soporta los botones atrás/adelante del navegador
+window.addEventListener('popstate', () => {
+  showPanel(location.hash.replace('#', ''), { updateHash: false });
+});
+
+// Carga inicial: respeta el hash de la URL si viene uno (ej. mecelsa.com/#servicios)
+showPanel(location.hash.replace('#', '') || 'inicio', { updateHash: false });
+
+
+// ===================== FORMULARIO "TRABAJE CON NOSOTROS" =====================
+// No hay backend en este sitio estático: al enviar, se arma un mensaje y se abre WhatsApp
+// con los datos ya escritos. Si luego conectas un servicio como Formspree o EmailJS,
+// solo reemplaza el contenido de esta función por el envío real.
+const jobForm = document.getElementById('jobForm');
+
+jobForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const data = new FormData(jobForm);
+  const nombre = data.get('nombre').trim();
+  const telefono = data.get('telefono').trim();
+  const correo = data.get('correo').trim();
+  const experiencia = data.get('experiencia').trim();
+
+  const mensaje =
+    `Hola, quiero postularme a MECEL S.A.%0A` +
+    `Nombre: ${nombre}%0A` +
+    `Teléfono: ${telefono}%0A` +
+    `Correo: ${correo}%0A` +
+    `Experiencia: ${experiencia}`;
+
+  window.open(`https://wa.me/573123456789?text=${mensaje}`, '_blank');
+  jobForm.reset();
+});
