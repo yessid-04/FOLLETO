@@ -1,3 +1,4 @@
+
 // ===================== NAVEGACIÓN POR PESTAÑAS (sin recargar la página) =====================
 const tabs = document.querySelectorAll('.tab');
 const panels = document.querySelectorAll('.panel');
