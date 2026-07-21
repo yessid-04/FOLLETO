@@ -112,7 +112,7 @@ p { color: var(--ink-soft); }
 
 /* ===================== PANELES ===================== */
 .panels {
-  max-width: 1080px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 2.75rem 1.5rem 4rem;
 }
@@ -180,14 +180,22 @@ p { color: var(--ink-soft); }
 /* ---- Split (texto + imagen) ---- */
 .split {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 2.5rem;
-  align-items: center;
+  grid-template-columns: 1.6fr 1.4fr;
+  gap: 7rem;
+  align-items: start;
   margin-bottom: 3rem;
 }
 .split-media img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow); }
 .split-text h2, .split-text h3 { margin-bottom: .8rem; }
 .split-text p { margin-bottom: .8rem; }
+
+.intro-image {
+  width: 50%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  margin: 1.5rem auto;
+  display: block;
+}
 
 /* ---- Value cards (Inicio) ---- */
 .value-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; }
@@ -219,13 +227,14 @@ p { color: var(--ink-soft); }
   box-shadow: var(--shadow);        /* sombrita sutil para que "flote" */
   padding: 1.75rem 2rem;            /* aire interno, más que las tarjetas chicas */
   margin-bottom: 2rem;              /* separación antes de las 3 tarjetas de foto */
-  text-align: center;               /* Para centrar info */
+  text-align: left;               /* Para centrar info */
 }
 
 .equipo-destacado p {
   font-size: 1.02rem;
   color: var(--ink-soft);
   margin: 0;
+  text-align: center;
 }
 .profile-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 .profile-card {
@@ -268,7 +277,32 @@ blockquote cite { display: block; margin-top: .6rem; font-style: normal; font-si
   border-radius: var(--radius-lg);
   padding: 1.6rem;
 }
+
+.equipo-destacado2 {
+  background: var(--card);          /* fondo blanco, igual que las otras tarjetas */
+  border: 1px solid var(--border);  /* borde suave, mismo tono que las demás */
+  border-radius: var(--radius-lg);  /* esquinas redondeadas, igual que profile-card */
+  box-shadow: var(--shadow);        /* sombrita sutil para que "flote" */
+  padding: 1.75rem 2rem;            /* aire interno, más que las tarjetas chicas */
+  margin-bottom: 2rem;              /* separación antes de las 3 tarjetas de foto */
+  text-align: left;               /* Para centrar info */
+}
+
+.equipo-destacado2 p {
+  font-size: 1.02rem;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
 .servicio-card-wide { grid-column: 1 / -1; }
+.servicio-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  margin-bottom: 1rem;
+}
+
 .card-icon {
   width: 46px; height: 46px;
   display: grid; place-items: center;
@@ -276,10 +310,22 @@ blockquote cite { display: block; margin-top: .6rem; font-style: normal; font-si
   color: #fff;
   border-radius: 12px;
   font-size: 1.15rem;
-  margin-bottom: 1rem;
+}
+
+.servicio-badge {
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--accent-dark);
+  background: var(--accent-soft);
+  padding: .3rem .7rem;
+  border-radius: 999px;
+  white-space: nowrap;
 }
 .servicio-card h3 { font-size: 1.15rem; margin-bottom: .5rem; }
 .servicio-card p { font-size: .93rem; }
+.Final { font-size: .82rem; color: var(--ink-soft); opacity: .8; margin-top: 1rem; text-align: center; }
 
 /* ---- Trabaje con nosotros ---- */
 .check-list { list-style: none; margin: 1rem 0; }

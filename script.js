@@ -62,17 +62,21 @@ jobForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const data = new FormData(jobForm);
   const nombre = data.get('nombre').trim();
-  const telefono = data.get('telefono').trim();
   const correo = data.get('correo').trim();
+  const telefono = data.get('telefono').trim();
+  const profesion = data.get('profesion').trim();
   const experiencia = data.get('experiencia').trim();
-
+  const ciudad = data.get('ciudad').trim();
+ 
   const mensaje =
-    `Hola, quiero postularme a MECEL S.A.%0A` +
+    `Hola, quiero postularme a MECEL S.C.%0A` +
     `Nombre: ${nombre}%0A` +
-    `Teléfono: ${telefono}%0A` +
     `Correo: ${correo}%0A` +
-    `Experiencia: ${experiencia}`;
-
-  window.open(`https://wa.me/573154325891?text=${mensaje}`, '_blank');
+    `Teléfono: ${telefono}%0A` +
+    `Profesión: ${profesion}%0A` +
+    `Experiencia: ${experiencia}%0A` +
+    `Ciudad: ${ciudad}`;
+ 
+  window.open(`https://wa.me/573157674984?text=${mensaje}`, '_blank');
   jobForm.reset();
 });
