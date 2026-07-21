@@ -80,3 +80,34 @@ jobForm.addEventListener('submit', (e) => {
   window.open(`https://wa.me/573157674984?text=${mensaje}`, '_blank');
   jobForm.reset();
 });
+
+// ===================== MODAL "SOLICITAR INFORMACIÓN" =====================
+const servicioModal = document.getElementById('servicioModal');
+const modalServicioTexto = document.getElementById('modalServicioTexto');
+const modalWhatsapp = document.getElementById('modalWhatsapp');
+const modalCorreo = document.getElementById('modalCorreo');
+const modalClose = document.getElementById('modalClose');
+
+const NUMERO_WHATSAPP = '573157674984'; // mismo numero que ya usas en el resto del sitio
+const CORREO_CONTACTO = 'ismaelosoman@yahoo.es'; // mismo correo que ya usas en Contactenos
+
+document.querySelectorAll('[data-servicio]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const servicio = btn.dataset.servicio;
+    const mensaje = `Hola, estoy interesado en ${servicio}.`;
+
+    modalServicioTexto.textContent = `${servicio} — ¿cómo prefieres contactarnos?`;
+    modalWhatsapp.href = `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(mensaje)}`;
+    modalCorreo.href = `mailto:${CORREO_CONTACTO}?subject=${encodeURIComponent('Interés en ' + servicio)}&body=${encodeURIComponent(mensaje)}`;
+
+    servicioModal.classList.add('open');
+  });
+});
+
+function cerrarModal() {
+  servicioModal.classList.remove('open');
+}
+modalClose.addEventListener('click', cerrarModal);
+servicioModal.addEventListener('click', (e) => {
+  if (e.target === servicioModal) cerrarModal(); // clic afuera de la cajita, cierra
+});

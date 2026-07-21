@@ -221,7 +221,7 @@
               <p>✔ Higiene</p>  
               <p>✔ Monitoreo</p>
               <p>✔ Rutinas</p>
-          <button class="btn-link" data-goto="contacto">Solicitar información <i class="fa-solid fa-arrow-right"></i></button>
+          <button class="btn-link" data-servicio="Hospedaje para recién nacidos">Solicitar información <i class="fa-solid fa-arrow-right"></i></button>
         </div>
 
 
@@ -238,7 +238,7 @@
           <p>✔ Apoyo a la Familia</p>
           <p>✔ Cuidado integral</p>
           <p>✔ Seguimiento</p>
-          <button class="btn-link" data-goto="contacto">Solicitar información <i class="fa-solid fa-arrow-right"></i></button>
+          <button class="btn-link" data-servicio="atencion permanente en el hogar">Solicitar información <i class="fa-solid fa-arrow-right"></i></button>
         </div>
 
         
@@ -250,7 +250,7 @@
           <p> ✔ Organización de documentos</p>
           <p> ✔ Apoyo durante la consulta </p>
           <p> ✔ Seguimiento de indicaciones médicas</p>
-          <button class="btn-link" data-goto="contacto">Solicitar información <i class="fa-solid fa-arrow-right"></i></button>
+          <button class="btn-link" data-servicio="acompañamiento a control medico">Solicitar información <i class="fa-solid fa-arrow-right"></i></button>
         </div>
 
 
@@ -263,7 +263,7 @@
             acompañamiento durante los primeros momentos de adaptación Y representacion para
             recomendaciones medicas.
           </p>
-          <button class="btn-link" data-goto="contacto">Solicitar información <i class="fa-solid fa-arrow-right"></i></button>
+          <button class="btn-link" data-servicio="acompañamiento en clinica">Solicitar información <i class="fa-solid fa-arrow-right"></i></button>
         </div>
 
         <div class="servicio-card servicio-card-wide">
@@ -276,7 +276,7 @@
           <p>✔ Apoyo en el cuidado diario</p>
           <p>✔ Orientacion a la familia</p>
           <p>✔ Seguimiento y Reportes sobre el bienestar del bebé</p>
-          <button class="btn-link" data-goto="contacto">Solicitar información <i class="fa-solid fa-arrow-right"></i></button>
+          <button class="btn-link" data-servicio="visitas domiciliarias">Solicitar información <i class="fa-solid fa-arrow-right"></i></button>
         </div>
 
       </div>
@@ -365,6 +365,10 @@
           <i class="fa-solid fa-location-dot"></i>
           <div><strong>Dirección</strong><span>Bogotá — servicio en toda la ciudad</span></div>
         </div>
+        <div class="contacto-item contacto-item-static">
+          <i class="fa-solid fa-clock"></i>
+          <div><strong>Horario de atencion</strong><span>Lunes A Sabado : 8am-6pm.</span></div>
+        </div>
       </div>
     </section>
 
@@ -374,6 +378,23 @@
   <footer class="site-footer">
     <p>© MECEL S.C. -2026  — Confianza y profesionalismo para tu familia.</p>
   </footer>
+
+  <!-- Modal: Solicitar información -->
+<div class="modal-overlay" id="servicioModal">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Cerrar">&times;</button>
+    <h3>Solicitar información</h3>
+    <p id="modalServicioTexto">¿Cómo prefieres contactarnos?</p>
+    <div class="modal-actions">
+      <a class="btn btn-accent" id="modalWhatsapp" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </a>
+      <a class="btn btn-outline" id="modalCorreo">
+        <i class="fa-solid fa-envelope"></i> Correo
+      </a>
+    </div>
+  </div>
+</div>
 
   <!-- Botón flotante de WhatsApp -->
   <a class="whatsapp-float" href="https://wa.me/573123456789" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
