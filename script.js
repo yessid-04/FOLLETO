@@ -111,3 +111,14 @@ modalClose.addEventListener('click', cerrarModal);
 servicioModal.addEventListener('click', (e) => {
   if (e.target === servicioModal) cerrarModal(); // clic afuera de la cajita, cierra
 });
+
+
+// ===================== ACORDEÓN "NUESTROS SERVICIOS" =====================
+document.querySelectorAll('.servicio-toggle').forEach(toggle => {
+  toggle.addEventListener('click', () => {
+    const card = toggle.closest('.servicio-card');
+    const isOpen = card.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.childNodes[0].textContent = isOpen ? 'Ver menos ' : 'Ver más ';
+  });
+});
